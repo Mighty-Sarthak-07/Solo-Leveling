@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {  
+      colors: {
+          facebook: '#3b5998',
+          twitter: '#1DA1F2',
+          linkedin: '#0077b5',
+          instagram: '#C13584',
         'custom-purple': '#6f2c91', // Add your custom color  
       },  
       fontFamily:{
