@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const GRID_SIZE = 5; // 5x5 grid
-const CHANCE_OF_shadow = 0.3; // 30% chance a tile has a shadow
-const MAX_ATTEMPTS = 5; // Only 5 attempts allowed
+const GRID_SIZE = 5; 
+const CHANCE_OF_shadow = 0.3; 
+const MAX_ATTEMPTS = 5;
 
 const ShadowGame = () => {
   const [grid, setGrid] = useState(Array(GRID_SIZE * GRID_SIZE).fill(null));
@@ -13,7 +13,6 @@ const ShadowGame = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Load total points from local storage when the game starts
     const savedPoints = localStorage.getItem("totalPoints");
     if (!savedPoints) {
       localStorage.setItem("totalPoints", "0");
@@ -21,10 +20,10 @@ const ShadowGame = () => {
   }, []);
 
   const handleTileClick = (index) => {
-    if (grid[index] !== null || gameOver) return; // Ignore already clicked tiles or when game over
+    if (grid[index] !== null || gameOver) return;
 
     if (attempts >= MAX_ATTEMPTS - 1) {
-      setGameOver(true); // End game when max attempts reached
+      setGameOver(true); 
     }
 
     const hasshadow = Math.random() < CHANCE_OF_shadow;
@@ -43,7 +42,7 @@ const ShadowGame = () => {
     const totalPoints = parseInt(localStorage.getItem("totalPoints"), 10) || 0;
     const newTotalPoints = totalPoints + score;
     localStorage.setItem("totalPoints", newTotalPoints.toString());
-    navigate("/shadowsystem"); // Navigate back to the Shadow System page
+    navigate("/shadowsystem");
   };
 
   return (

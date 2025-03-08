@@ -9,7 +9,7 @@ import Contact from './components/Contact';
 import ShadowSystem from "./components/ShadowSystem";
 import ShadowGame from "./components/ShadowGame"; 
 import './App.css';
-import ContactPage from './components/ContactPage';
+import WatchTrailer from './components/WatchTrailer';
 
 function App() {
   return (
@@ -28,8 +28,7 @@ function App() {
         } />
         <Route path="/shadowsystem" element={<ShadowSystem />} />
         <Route path="/shadowgame" element={<ShadowGame />} />
-        <Route path="/hero" element={<Hero />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/watch" element={<WatchTrailer />} />
       </Routes>
     </Router>
   );

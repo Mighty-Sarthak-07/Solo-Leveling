@@ -1,9 +1,9 @@
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { TiLocationArrow } from "react-icons/ti";
 import { useEffect, useRef, useState } from "react";
-
+import { TiLocationArrow } from "react-icons/ti";
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import VideoPreview from "./VideoPreview";
 
@@ -154,12 +154,12 @@ const Hero = () => {
             Conquer, Level Up, Dominate
             </p>
 
-            <Button
+            <Link to={"/watch"}><Button
               id="watch-trailer"
               title="Watch trailer"
               leftIcon={<TiLocationArrow />}
               containerClass="bg-yellow-300 flex-center gap-1"
-            />
+            /></Link>
           </div>
         </div>
       </div>
