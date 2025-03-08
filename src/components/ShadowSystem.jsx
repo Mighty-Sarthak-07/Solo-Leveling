@@ -54,27 +54,27 @@ const ShadowSystem = () => {
       
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      <div className="relative bg-black bg-opacity-20 text-blue-400 p-6 rounded-lg neon-border shadow-lg w-[50%] mx-auto border border-blue-500">
+      <div className="relative bg-black bg-opacity-20 text-blue-400 p-6 rounded-lg neon-border shadow-lg lg:w-[50%] w-[85%] mx-auto border border-blue-500">
         <h1 className="text-3xl font-bold text-center mb-4">Shadow System</h1>
         <div className="flex items-center justify-between mt-6 border-t border-blue-500 pt-4">
         <div className="flex items-center space-x-2 py-5 w-1/2 ml-4">
-            <FaHeart className="text-red-600 text-lg" />
+            <FaHeart className="text-red-600 md:text-lg text-md" />
             <div className="relative w-full h-5 bg-red-500 rounded-full overflow-hidden border text-red-600">
               <div 
                 className="absolute top-0 left-0 h-full text-red-600 transition-all duration-300 flex flex-col"
                 style={{ width: `${(stats.hp / stats.maxHp) * 100}%` }}
-              > <span className="text-sm px-2 font-bold text-black">{stats.hp}/{stats.maxHp}</span></div>
+              > <span className="text-[0.60rem] md:text-sm px-2 font-bold text-black">{stats.hp}/{stats.maxHp}</span></div>
             </div>
            
           </div>
 
           <div className="flex items-center space-x-2 py-5 w-1/2 ml-4">
-            <FaBrain className="text-blue-400 text-lg" />
+            <FaBrain className="text-blue-400 md:text-lg text-md" />
             <div className="relative w-full h-5 bg-gray-900 rounded-full overflow-hidden border border-blue-500">
               <div 
                 className="absolute top-0 left-0 h-full bg-blue-400 transition-all duration-300 flex flex-col"
                 style={{ width: `${(stats.mp / stats.maxMp) * 100}%` }}
-              > <span className="text-sm px-2 font-bold text-black">{stats.mp}/{stats.maxMp}</span></div>
+              > <span className="text-[0.60rem] md:text-sm px-2 font-bold text-black">{stats.mp}/{stats.maxMp}</span></div>
             </div>
            
           </div>
